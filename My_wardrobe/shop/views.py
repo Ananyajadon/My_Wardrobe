@@ -8,6 +8,7 @@ def index(request):
     products = Product.objects.all()
     feat_products = FeatProduct.objects.all()
     n = len(products)
+    print(products)
     all_prods = [[feat_products], [feat_products]]
     params = {'products': products, 'all_prods': all_prods}
     return render(request, 'shop/index.html', params)
