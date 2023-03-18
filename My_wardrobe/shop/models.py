@@ -15,6 +15,7 @@ class Product(models.Model):
 
 
 class FeatProduct(models.Model):
+    IsFiction = models.BooleanField(default=True)
     category = models.CharField(max_length=50, default="")
     sub_category = models.CharField(max_length=50, default="")
     product_name = models.CharField(max_length=50, default="")
