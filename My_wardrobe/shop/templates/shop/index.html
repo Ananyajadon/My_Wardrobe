@@ -152,13 +152,13 @@
 <!-- featured section starts  -->
 
 <section class="featured" id="featured">
-    {% for feat_products in all_prods %}
-    <h1 class="heading"> <span>featured books</span> </h1>
+    {% for category_products in all_prods %}
+    <h1 class="heading"> <span>You are looking at {{category_products.0.0.category}}al books</span></h1>
 
     <div class="swiper featured-slider">
 
         <div class="swiper-wrapper">
-            {% for i in feat_products.0 %}
+            {% for i in category_products.0 %}
             <div class="swiper-slide box">
                 <div class="icons">
                     <a href="#" class="fas fa-search"></a>
@@ -169,7 +169,9 @@
                     <img src="/media/{{i.image}}" alt="{{i.product_name}}">
                 </div>
                 <div class="content">
-                    <h3>{{i.product_name}}</h3>
+                    <h3>{{i.product_name}}<br>
+                        genre: {{i.sub_category}}
+                    </h3>
                     <div class="price">₹{{i.product_price}}</div>
                     <a href="#" class="btn">add to cart</a>
                 </div>
@@ -180,152 +182,6 @@
         <div class="swiper-button-prev"></div>
     </div>
     {% endfor %}
-
-<!--            <div class="swiper-slide box">-->
-<!--                <div class="icons">-->
-<!--                    <a href="#" class="fas fa-search"></a>-->
-<!--                    <a href="#" class="fas fa-heart"></a>-->
-<!--                    <a href="#" class="fas fa-eye"></a>-->
-<!--                </div>-->
-<!--                <div class="image">-->
-<!--                    <img src="{% static 'shop/book-2.png' %}" alt="">-->
-<!--                </div>-->
-<!--                <div class="content">-->
-<!--                    <h3>featured books</h3>-->
-<!--                    <div class="price">₹399 <span>₹499</span></div>-->
-<!--                    <a href="#" class="btn">add to cart</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="swiper-slide box">-->
-<!--                <div class="icons">-->
-<!--                    <a href="#" class="fas fa-search"></a>-->
-<!--                    <a href="#" class="fas fa-heart"></a>-->
-<!--                    <a href="#" class="fas fa-eye"></a>-->
-<!--                </div>-->
-<!--                <div class="image">-->
-<!--                    <img src="{% static 'shop/book-3.png' %}" alt="">-->
-<!--                </div>-->
-<!--                <div class="content">-->
-<!--                    <h3>featured books</h3>-->
-<!--                    <div class="price">₹529 <span>₹649</span></div>-->
-<!--                    <a href="#" class="btn">add to cart</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="swiper-slide box">-->
-<!--                <div class="icons">-->
-<!--                    <a href="#" class="fas fa-search"></a>-->
-<!--                    <a href="#" class="fas fa-heart"></a>-->
-<!--                    <a href="#" class="fas fa-eye"></a>-->
-<!--                </div>-->
-<!--                <div class="image">-->
-<!--                    <img src="{% static 'shop/book-4.png' %}" alt="">-->
-<!--                </div>-->
-<!--                <div class="content">-->
-<!--                    <h3>featured books</h3>-->
-<!--                    <div class="price">₹159 <span>₹299</span></div>-->
-<!--                    <a href="#" class="btn">add to cart</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="swiper-slide box">-->
-<!--                <div class="icons">-->
-<!--                    <a href="#" class="fas fa-search"></a>-->
-<!--                    <a href="#" class="fas fa-heart"></a>-->
-<!--                    <a href="#" class="fas fa-eye"></a>-->
-<!--                </div>-->
-<!--                <div class="image">-->
-<!--                    <img src="{% static 'shop/book-5.png' %}" alt="">-->
-<!--                </div>-->
-<!--                <div class="content">-->
-<!--                    <h3>featured books</h3>-->
-<!--                    <div class="price">₹399 <span>₹459</span></div>-->
-<!--                    <a href="#" class="btn">add to cart</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="swiper-slide box">-->
-<!--                <div class="icons">-->
-<!--                    <a href="#" class="fas fa-search"></a>-->
-<!--                    <a href="#" class="fas fa-heart"></a>-->
-<!--                    <a href="#" class="fas fa-eye"></a>-->
-<!--                </div>-->
-<!--                <div class="image">-->
-<!--                    <img src="{% static 'shop/book-6.png' %}" alt="">-->
-<!--                </div>-->
-<!--                <div class="content">-->
-<!--                    <h3>featured books</h3>-->
-<!--                    <div class="price">₹519 <span>₹619</span></div>-->
-<!--                    <a href="#" class="btn">add to cart</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="swiper-slide box">-->
-<!--                <div class="icons">-->
-<!--                    <a href="#" class="fas fa-search"></a>-->
-<!--                    <a href="#" class="fas fa-heart"></a>-->
-<!--                    <a href="#" class="fas fa-eye"></a>-->
-<!--                </div>-->
-<!--                <div class="image">-->
-<!--                    <img src="{% static 'shop/book-7.png' %}" alt="">-->
-<!--                </div>-->
-<!--                <div class="content">-->
-<!--                    <h3>featured books</h3>-->
-<!--                    <div class="price">₹299 <span>₹379</span></div>-->
-<!--                    <a href="#" class="btn">add to cart</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="swiper-slide box">-->
-<!--                <div class="icons">-->
-<!--                    <a href="#" class="fas fa-search"></a>-->
-<!--                    <a href="#" class="fas fa-heart"></a>-->
-<!--                    <a href="#" class="fas fa-eye"></a>-->
-<!--                </div>-->
-<!--                <div class="image">-->
-<!--                    <img src="{% static 'shop/book-8.png' %}" alt="">-->
-<!--                </div>-->
-<!--                <div class="content">-->
-<!--                    <h3>featured books</h3>-->
-<!--                    <div class="price">₹369 <span>₹449</span></div>-->
-<!--                    <a href="#" class="btn">add to cart</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="swiper-slide box">-->
-<!--                <div class="icons">-->
-<!--                    <a href="#" class="fas fa-search"></a>-->
-<!--                    <a href="#" class="fas fa-heart"></a>-->
-<!--                    <a href="#" class="fas fa-eye"></a>-->
-<!--                </div>-->
-<!--                <div class="image">-->
-<!--                    <img src="{% static 'shop/book-9.png' %}" alt="">-->
-<!--                </div>-->
-<!--                <div class="content">-->
-<!--                    <h3>featured books</h3>-->
-<!--                    <div class="price">₹379 <span>₹439</span></div>-->
-<!--                    <a href="#" class="btn">add to cart</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--            <div class="swiper-slide box">-->
-<!--                <div class="icons">-->
-<!--                    <a href="#" class="fas fa-search"></a>-->
-<!--                    <a href="#" class="fas fa-heart"></a>-->
-<!--                    <a href="#" class="fas fa-eye"></a>-->
-<!--                </div>-->
-<!--                <div class="image">-->
-<!--                    <img src="{% static 'shop/book-10.png' %}" alt="">-->
-<!--                </div>-->
-<!--                <div class="content">-->
-<!--                    <h3>featured books</h3>-->
-<!--                    <div class="price">₹149<span>₹299</span></div>-->
-<!--                    <a href="#" class="btn">add to cart</a>-->
-<!--                </div>-->
-<!--            </div>-->
-
-
 
 </section>
 
