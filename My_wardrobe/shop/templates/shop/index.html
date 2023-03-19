@@ -205,19 +205,19 @@
 
 <section class="arrivals" id="arrivals">
 
-    <h1 class="heading"> <span>new arrivals</span> </h1>
+    <h1 class="heading"> <span>latest weekly arrivals</span> </h1>
 
     <div class="swiper arrivals-slider">
-
         <div class="swiper-wrapper">
-
+            {% for new_books in new_arrivals1 %}
+            {% for new_book in new_books %}
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="{% static 'shop/book-1.png' %}" alt="">
+                    <img src="/media/{{new_book.image}}" alt="{{new_book.product_name}}">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">₹399 <span>₹599</span></div>
+                    <h3>{{new_book.product_name}}</h3>
+                    <div class="price">₹{{new_book.product_price}}<span></span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -227,90 +227,23 @@
                     </div>
                 </div>
             </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="{% static 'shop/book-2.png' %}" alt="">
-                </div>
-                <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">₹219 <span>₹299</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="{% static 'shop/book-3.png' %}" alt="">
-                </div>
-                <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">₹549<span>₹699</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="{% static 'shop/book-4.png' %}" alt="">
-                </div>
-                <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">₹159<span></span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="{% static 'shop/book-5.png' %}" alt="">
-                </div>
-                <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">₹259 <span>₹399</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
+            {% endfor %}
+            {% endfor %}
         </div>
-
     </div>
 
+              <!--row 2 slider -->
     <div class="swiper arrivals-slider">
-
         <div class="swiper-wrapper">
-
+            {% for new_books in new_arrivals2 %}
+            {% for new_book in new_books %}
             <a href="#" class="swiper-slide box">
                 <div class="image">
-                    <img src="{% static 'shop/book-6.png' %}" alt="">
+                    <img src="/media/{{new_book.image}}" alt="{{new_book.product_name}}">
                 </div>
                 <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">₹299 <span>₹359</span></div>
+                    <h3>{{new_book.product_name}}</h3>
+                    <div class="price">₹{{new_book.product_price}}<span></span></div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
                         <i class="fas fa-star"></i>
@@ -320,79 +253,10 @@
                     </div>
                 </div>
             </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="{% static 'shop/book-7.png' %}" alt="">
-                </div>
-                <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">₹399 <span>₹429</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="{% static 'shop/book-8.png' %}" alt="">
-                </div>
-                <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">₹289 <span>₹329</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="{% static 'shop/book-9.png' %}" alt="">
-                </div>
-                <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">₹339 <span>₹399</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
-            <a href="#" class="swiper-slide box">
-                <div class="image">
-                    <img src="{% static 'shop/book-10.png' %}" alt="">
-                </div>
-                <div class="content">
-                    <h3>new arrivals</h3>
-                    <div class="price">₹199 <span>₹449</span></div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star-half-alt"></i>
-                    </div>
-                </div>
-            </a>
-
-        </div>
-
+            {% endfor %}
+            {% endfor %}
+         </div>
     </div>
-
 </section>
 
 <!-- arrivals section ends -->
